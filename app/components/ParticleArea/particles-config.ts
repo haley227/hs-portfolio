@@ -1,6 +1,5 @@
 const particlesConfig =  {
     autoPlay: true,
-    
     fullScreen: {
       enable: true,
       zIndex: -1
