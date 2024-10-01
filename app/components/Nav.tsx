@@ -13,6 +13,7 @@ export type NavigationItem = {
 const navigation: NavigationItem[] = [
   { href: '/', name: 'Home' },
   { href: '/about', name: 'About' },
+  { href: '/blog', name: 'Blog' },
   { href: '/portfolio', name: 'My Work' },
   { href: '/contact', name: 'Contact' },
 ];
@@ -36,7 +37,7 @@ export const Nav = () => {
     };
 
     return (
-        <nav className="w-screen fixed top-0 left-0 bg-slate-50 dark:bg-gray-900">
+        <nav className="w-screen fixed top-0 left-0 bg-slate-50 dark:bg-gray-900 z-10">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                   <DesktopNavLinks navigationLinks={navigation} checkActivePath={checkActivePath}/>
@@ -67,8 +68,8 @@ export const Nav = () => {
                 <div className="space-y-1 flex flex-col justify-center text-center h-[calc(100vh-4rem)] gap-6">
                     {navigation.map(({ href, name }) => (
                         <Link key={href} href={href}
-                            className="hover:scale-150 group transition px-2 pt-2 duration-300 text-gray-900 dark:text-white hover:text-sky-500 dark:hover:text-sky-500 rounded-mdpy-2 text-5xl font-medium">
-                            {name}
+                          className="hover:scale-150 group transition px-2 pt-2 duration-300 text-gray-900 dark:text-white hover:text-sky-500 dark:hover:text-sky-500 rounded-mdpy-2 text-5xl font-medium">
+                          {name}
                         </Link>
                     ))}
                 </div>
